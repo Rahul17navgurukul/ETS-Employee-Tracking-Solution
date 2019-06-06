@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.UserLocation">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/latitude"
+        android:text="jnfkd"
+        android:textSize="17sp"
+        android:textAlignment="center"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@id/getLocationBtn"
+        android:padding="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/logitude"
+        android:text="jdhvjfd"
+        android:textSize="17sp"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@id/getLocationBtn"
+        android:padding="10dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Current Location"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:padding="10dp"
+        android:id="@+id/getLocationBtn"/>
+
+    <fragment
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/current_location"
+        android:layout_above="@id/logitude"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"/>
+
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/callLog"
+        android:title="Call Logs"/>
+    <item
+        android:id="@+id/callrecoding"
+        android:title="Call Recording"
+        />
+
+    <item android:title="Profile"
+        android:id="@+id/profile"
+        />
+
+    <item android:title="Location"
+        android:id="@+id/location"
+        />
+
+    <item android:title="Setting"
+        android:id="@+id/setting"
+        />
+
+    <item android:title="Log Out"
+        android:id="@+id/logout"
+        />
+
+</menu>
