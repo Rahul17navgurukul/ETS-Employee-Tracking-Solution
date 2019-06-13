@@ -12,11 +12,70 @@
         android:id="@+id/toolbar_class"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorPrimaryDark"
-        android:elevation="4dp"
         app:title="ETS-Employee Tracking Solution"
         app:theme="@style/ToolbarColored"
         app:titleTextColor="#FEFDFD"
         app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_filter"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/filerImage"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_filter"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"
+        android:id="@+id/unfilerImage"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_below="@id/toolbar_class"
+        android:id="@+id/navCard"
+        android:visibility="gone"
+        android:layout_height="40dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:drawableStart="@drawable/ic_calender"
+               android:text="Date"
+               android:textSize="20sp"
+               android:layout_marginTop="8dp"
+               android:textStyle="bold"
+               android:id="@+id/card_date"
+               android:layout_alignParentEnd="true"
+               android:layout_marginRight="50dp"
+               android:layout_centerInParent="true"
+               />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_agent"
+                android:text="Agent"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/card_agent"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -32,7 +91,7 @@
         android:id="@+id/navigation"
         app:menu="@menu/buttom_menu"
         app:itemTextColor="#fff"
-        android:layout_below="@+id/toolbar_class"
+        android:layout_below="@+id/navCard"
         app:itemBackground="@color/colorPrimaryDark"
         app:itemIconTint="@color/colorNavItem"
         />

@@ -6,12 +6,14 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.media.MediaRecorder;
 import android.os.Environment;
+import android.provider.ContactsContract;
 import android.telephony.TelephonyManager;
-import android.util.Log;
 
 import com.example.shivnath.betyphontracking.CallDetect;
 import com.aykuttasil.callrecord.CallRecord;
 
+import java.io.File;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class CallHelper {
@@ -20,6 +22,12 @@ public class CallHelper {
     private Context ctx;
     private CallDetect outgoingReceiver;
     private String savedNumber, number;
+    private String mediaPath;
+
+
+    MediaRecorder recorder;
+    static final String TAGS=" Inside Service";
+
 
 
     public CallHelper(Context ctx) {
@@ -64,19 +72,24 @@ public class CallHelper {
         }
 
         protected void onIncomingCallStarted(Context ctx, String number, Date start) {
-
+            recorder.start();
+            callRecord.stopCallReceiver();
         }
+
 
         protected void onOutgoingCallStarted(Context ctx, String number, Date start) {
             callRecord.startCallReceiver();
+            recorder.start();
         }
 
         protected void onIncomingCallEnded(Context ctx, String number, Date start, Date end) {
             callRecord.stopCallReceiver();
+            recorder.stop();
         }
 
         protected void onOutgoingCallEnded(Context ctx, String number, Date start, Date end) {
             callRecord.stopCallReceiver();
+            recorder.stop();
         }
 
         protected void onMissedCall(Context ctx, String number, Date start) {
@@ -131,25 +144,36 @@ public class CallHelper {
 
         IntentFilter intentFilter = new IntentFilter(Intent.ACTION_NEW_OUTGOING_CALL);
         ctx.registerReceiver(outgoingReceiver, intentFilter);
-
-        // start call recorder
         callRecord = new CallRecord.Builder(ctx)
-                .setRecordDirName("Betyphon")
-                .setRecordDirPath(Environment.getExternalStorageDirectory().getPath()) // optional & default value
+                .setRecordFileName(new SimpleDateFormat("HH:mm:ss").format(new Date()))
+                .setRecordDirName("ETS")
+                .setRecordDirPath(Environment.getExternalStorageDirectory().getPath())
                 .setAudioEncoder(MediaRecorder.AudioEncoder.AAC)
-                .setOutputFormat(MediaRecorder.OutputFormat.MPEG_4)
+                .setOutputFormat(MediaRecorder.OutputFormat.AAC_ADTS)
                 .setAudioSource(MediaRecorder.AudioSource.VOICE_COMMUNICATION)
-//                .setShowSeed(true)
-                .build();;
-        // Start recording
-        callRecord.startCallReceiver();
+                .setShowPhoneNumber(true)
+                .build();
+
+
+        callRecord.startCallRecordService();
+
+
+
+
     }
+
+
 
     /**
      * Stop calls detection.
      */
-    public void stop() {
-        ctx.unregisterReceiver(outgoingReceiver);
-    }
+    public void stopRecording() {
 
+        callRecord.stopCallReceiver();
+
+        callRecord.disableSaveFile();
+
+
+
+    }
 }

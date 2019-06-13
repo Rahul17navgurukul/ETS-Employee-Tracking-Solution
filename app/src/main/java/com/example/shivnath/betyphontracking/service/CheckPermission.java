@@ -16,6 +16,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import com.example.shivnath.betyphontracking.MainActivity;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -28,6 +30,8 @@ public class CheckPermission extends AppCompatActivity {
     public void checkPermission(Activity activity) {
         this.activity = activity;
         doAllPermissionChecking();
+
+
     }
 
     private void doAllPermissionChecking() {
@@ -65,6 +69,7 @@ public class CheckPermission extends AppCompatActivity {
 
             return;
         }
+
 
 
 

@@ -2,11 +2,15 @@ package com.example.shivnath.betyphontracking.service;
 
 import android.app.Service;
 import android.content.Intent;
+import android.media.MediaRecorder;
 import android.os.IBinder;
 
 public class CallDetectService extends Service {
 
     private CallHelper callHelper;
+    MediaRecorder recorder;
+    static final String TAGS=" Inside Service";
+
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
@@ -20,7 +24,7 @@ public class CallDetectService extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        callHelper.stop();
+        callHelper.stopRecording();
     }
 
     @Override

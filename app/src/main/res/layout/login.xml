@@ -56,7 +56,7 @@
             />
     </LinearLayout>
     <Button
-        android:id="@+id/login"
+        android:id="@+id/loginBnt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Login"

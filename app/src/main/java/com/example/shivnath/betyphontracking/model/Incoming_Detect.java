@@ -14,6 +14,15 @@ public class Incoming_Detect extends RealmObject {
     private String num;
     private String incomingDate;
     private int count;
+    boolean test;
+
+    public boolean isTest() {
+        return test;
+    }
+
+    public void setTest(boolean test) {
+        this.test = test;
+    }
 
     public int getCount() {
         return count;

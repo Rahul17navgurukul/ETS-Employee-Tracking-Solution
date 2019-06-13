@@ -1,28 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/dash"
+        android:title="Dashboard"
+        app:showAsAction="never"/>
 
     <item
         android:id="@+id/callLog"
-        android:title="Call Logs"/>
+        android:title="Call Logs"
+        app:showAsAction="never"/>
+
+    <item android:title="My-Team"
+        android:id="@+id/profile"
+        app:showAsAction="never"/>
+
+
     <item
         android:id="@+id/callrecoding"
         android:title="Call Recording"
-        />
+        app:showAsAction="never"        />
 
-    <item android:title="Profile"
-        android:id="@+id/profile"
-        />
+
 
     <item android:title="Location"
         android:id="@+id/location"
+        app:showAsAction="never"        />
+
+
+    <item android:title="Prospect"
+        android:id="@+id/prospect"
+        app:showAsAction="never"        />
+
+    <item android:title="Report"
+        android:id="@+id/logout"
+        app:showAsAction="never"
         />
 
     <item android:title="Setting"
         android:id="@+id/setting"
-        />
+        app:showAsAction="never"        />
 
-    <item android:title="Log Out"
-        android:id="@+id/logout"
-        />
+
 
 </menu>

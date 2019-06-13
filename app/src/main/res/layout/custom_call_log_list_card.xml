@@ -33,17 +33,64 @@
                 android:layout_height="wrap_content"
                 android:text="Call Duration" />
 
+            <TextView
+                android:id="@+id/tv_initiated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Initiated By " />
+
 
 
         </LinearLayout>
 
-        <ImageButton
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:layout_marginRight="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="40dp"
             android:id="@+id/ic_play"
+            android:layout_marginTop="25dp"
             android:src="@drawable/ic_play" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="40dp"
+                android:id="@+id/ic_pause"
+                android:layout_marginTop="25dp"
+                android:visibility="invisible"
+                android:src="@drawable/ic_pause" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:id="@+id/ic_check"
+                android:layout_marginTop="25dp"
+                android:visibility="visible"
+                android:src="@drawable/ic_done" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:id="@+id/ic_done"
+                android:layout_marginTop="25dp"
+                android:visibility="invisible"
+                android:src="@drawable/ic_done" />
+
+        </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
 
