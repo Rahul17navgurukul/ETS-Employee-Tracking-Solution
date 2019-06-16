@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:layout_below="@id/d"
+                android:id="@+id/loc"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="longitude"
+            android:layout_below="@id/d"
+            android:id="@+id/timelinelongitute"
+            android:layout_toRightOf="@id/loc"
+            android:layout_marginLeft="10dp"
+            />
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="longitude"-->
+                <!--android:id="@+id/timelinelatitude"-->
+                <!--/>-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:layout_below="@id/u"
+                android:id="@+id/d"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="89:34"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/u"
+                android:layout_toRightOf="@id/d"
+                android:id="@+id/locDate"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User-Id"
+                android:id="@+id/u"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="78878"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/u"
+                android:id="@+id/locUserId"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

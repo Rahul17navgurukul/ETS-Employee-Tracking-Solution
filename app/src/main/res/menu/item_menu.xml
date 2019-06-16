@@ -34,9 +34,19 @@
         app:showAsAction="never"        />
 
     <item android:title="Report"
-        android:id="@+id/logout"
+        android:id="@+id/report"
         app:showAsAction="never"
-        />
+        >
+
+        <menu>
+
+            <item android:title="Attendance"
+                android:id="@+id/attendence"
+                app:showAsAction="never"        />
+
+        </menu>
+
+    </item>
 
     <item android:title="Setting"
         android:id="@+id/setting"

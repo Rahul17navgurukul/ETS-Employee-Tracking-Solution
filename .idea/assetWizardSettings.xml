@@ -34,7 +34,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="url" value="jar:file:/home/rk/android-studio/plugins/android/lib/android.jar!/images/material_design_icons/action/ic_face_black_24dp.xml" />
+                                                <entry key="url" value="jar:file:/home/rk/android-studio/plugins/android/lib/android.jar!/images/material_design_icons/action/ic_timeline_black_24dp.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -56,7 +56,8 @@
                                   <option name="values">
                                     <map>
                                       <entry key="imageAsset" value="$USER_HOME$/Desktop/logo.png" />
-                                      <entry key="outputName" value="ic_agent" />
+                                      <entry key="outputName" value="ic_rimelime" />
+                                      <entry key="theme" value="HOLO_DARK" />
                                       <entry key="themeColor" value="ffffff" />
                                     </map>
                                   </option>

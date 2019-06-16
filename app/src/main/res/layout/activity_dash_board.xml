@@ -27,6 +27,8 @@
         app:searchCloseIcon="@drawable/ic_action_navigation_close_inverted"
         app:searchSuggestionIcon="@drawable/ic_suggestion" />
 
+
+
     <androidx.drawerlayout.widget.DrawerLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -47,7 +49,7 @@
 
 
 
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    <ScrollView
         android:id="@+id/scroll1"
         android:layout_below="@id/dash_toolbar"
         android:layout_width="match_parent"
@@ -63,6 +65,42 @@
             android:layout_below="@id/dash_toolbar"
             android:orientation="vertical">
 
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="Off Duty"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="On Duty"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentEnd="true"
+                android:textSize="20sp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:scaleX="2"
+                android:scaleY="1"
+                android:layout_centerHorizontal="true"
+                android:theme="@style/SCBSwitch"
+                android:id="@+id/simpleSwitch"
+                />
+            </RelativeLayout>
 
             <TextView
                 android:id="@+id/noofcall"
@@ -132,78 +170,121 @@
                 android:textSize="25sp"
                 android:textStyle="italic" />
 
-            <TextView
-                android:id="@+id/a"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/talktime"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/btn_style"
-                android:gravity="center"
-                android:text="Travelling: 15km"
-                android:textSize="25sp"
-                android:textStyle="italic" />
+            <!--<TextView-->
+                <!--android:id="@+id/a"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@id/talktime"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:background="@drawable/btn_style"-->
+                <!--android:gravity="center"-->
+                <!--android:text="Travelling: 15km"-->
+                <!--android:textSize="25sp"-->
+                <!--android:textStyle="italic" />-->
 
-            <TextView
-                android:id="@+id/b"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/a"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/btn_style"
-                android:gravity="center"
-                android:text="Visit : 3"
-                android:textSize="25sp"
-                android:textStyle="italic" />
+            <!--<TextView-->
+                <!--android:id="@+id/b"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@id/a"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:background="@drawable/btn_style"-->
+                <!--android:gravity="center"-->
+                <!--android:text="Visit : 3"-->
+                <!--android:textSize="25sp"-->
+                <!--android:textStyle="italic" />-->
 
-            <TextView
-                android:id="@+id/c"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/b"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/btn_style"
-                android:gravity="center"
-                android:text="Prospect Contacted"
-                android:textSize="25sp"
-                android:textStyle="italic" />
+            <!--<TextView-->
+                <!--android:id="@+id/c"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@id/b"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:background="@drawable/btn_style"-->
+                <!--android:gravity="center"-->
+                <!--android:text="Prospect Contacted"-->
+                <!--android:textSize="25sp"-->
+                <!--android:textStyle="italic" />-->
 
-            <!--<com.github.mikephil.charting.charts.PieChart-->
-                <!--android:id="@+id/chart1"-->
-                <!--android:layout_width="350dp"-->
-                <!--android:layout_height="400dp"-->
-                <!--android:layout_below="@+id/c"-->
-                <!--android:layout_marginTop="210dp"-->
-                <!--android:layout_marginEnd="50dp"-->
-                <!--android:layout_marginBottom="120dp" />-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp">
 
             <com.anychart.AnyChartView
                 android:id="@+id/any_chart_view"
                 android:layout_width="match_parent"
-                android:layout_height="450dp"
-                android:layout_marginTop="100dp"
-                android:layout_below="@+id/c"
-                />
-
-            <!--<com.github.mikephil.charting.charts.BarChart-->
-                <!--android:id="@+id/barchart"-->
-                <!--android:layout_width="350dp"-->
-                <!--android:layout_height="400dp"-->
-                <!--android:layout_below="@+id/chart1" />-->
-
-            <com.anychart.AnyChartView
-                android:id="@+id/barchart"
-                android:layout_width="match_parent"
-                android:layout_height="500dp"
+                android:layout_height="400dp"
                 android:layout_marginTop="20dp"
                 />
 
+            <com.anychart.AnyChartView
+                android:id="@+id/barchart22"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:padding="10dp"
+                android:layout_below="@id/any_chart_view"
+                android:layout_marginTop="20dp"
+                />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12-01"
+                    android:id="@+id/one"
+                    android:layout_below="@id/barchart22"
+                    android:layout_marginLeft="65dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="01-02"
+                    android:id="@+id/two"
+                    android:layout_below="@id/barchart22"
+                    android:layout_toRightOf="@+id/one"
+                    android:layout_marginLeft="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="02-03"
+                    android:id="@+id/three"
+                    android:layout_below="@id/barchart22"
+                    android:layout_toRightOf="@+id/two"
+                    android:layout_marginLeft="15dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="03-04"
+                    android:id="@+id/four"
+                    android:layout_below="@id/barchart22"
+                    android:layout_toRightOf="@+id/three"
+                    android:layout_marginLeft="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="04-05"
+                    android:id="@+id/five"
+                    android:layout_below="@id/barchart22"
+                    android:layout_toRightOf="@+id/four"
+                    android:layout_marginLeft="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="05-06"
+                    android:id="@+id/six"
+                    android:layout_below="@id/barchart22"
+                    android:layout_toRightOf="@+id/five"
+                    android:layout_marginLeft="15dp"/>
+            </RelativeLayout>
 
         </LinearLayout>
 

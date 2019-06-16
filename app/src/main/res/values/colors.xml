@@ -9,4 +9,9 @@
     <color name="white">#ffffff</color>
     <color name="colorNavItem">#ffffff</color>
 
+    <color name="enbleStich">#46bdbf</color>
+
+    <color name="disableStich">#1c000000</color>
+
+
 </resources>
