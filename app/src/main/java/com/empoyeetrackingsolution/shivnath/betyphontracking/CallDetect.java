@@ -1,10 +1,12 @@
 package com.empoyeetrackingsolution.shivnath.betyphontracking;
 
+import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -19,6 +21,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -56,7 +59,7 @@ public class CallDetect extends BroadcastReceiver {
     private static Date callStartTime, date2;
     private static boolean incoming, wasRinging;
     static long start_time, end_time;
-    private static String savedNumber, info, name;
+    private static String savedNumber;
     private String number;
     private SimpleDateFormat sdf;
     private static int lastState = TelephonyManager.CALL_STATE_IDLE;
@@ -88,8 +91,6 @@ public class CallDetect extends BroadcastReceiver {
 
         if (intent.getAction().equals("android.intent.action.NEW_OUTGOING_CALL")) {
             savedNumber = intent.getExtras().getString("android.intent.extra.PHONE_NUMBER");
-            info = intent.getExtras().getString("android.intent.extra.NAME");
-            name = intent.getExtras().getString("name");
             callStartTime = new Date();
 
         } else {
@@ -240,8 +241,6 @@ public class CallDetect extends BroadcastReceiver {
     }
 
 
-
-
     private void postingIncoming(Date end, Date start, String number) {
 
         final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
@@ -352,55 +351,32 @@ public class CallDetect extends BroadcastReceiver {
 
     private void callDuration() {
 
-        StringBuffer sb = new StringBuffer();
-        Uri contacts = CallLog.Calls.CONTENT_URI;
-        try {
-            Cursor managedCursor = context.getContentResolver().query( CallLog.Calls.CONTENT_URI,null, null,null, android.provider.CallLog.Calls.DATE + " DESC limit 1;");
-            int number = managedCursor.getColumnIndex(CallLog.Calls.NUMBER);
-            int type = managedCursor.getColumnIndex(CallLog.Calls.TYPE);
-            int date = managedCursor.getColumnIndex(CallLog.Calls.DATE);
-            int duration = managedCursor.getColumnIndex(CallLog.Calls.DURATION);
-            sb.append("Call Details :");
-            while (managedCursor.moveToNext()) {
-
-                HashMap rowDataCall = new HashMap<String, String>();
-
-                String phNumber = managedCursor.getString(number);
-                String callType = managedCursor.getString(type);
-                String callDate = managedCursor.getString(date);
-                String callDayTime = new Date(Long.valueOf(callDate)).toString();
-                // long timestamp = convertDateToTimestamp(callDayTime);
-                String callDuration = managedCursor.getString(duration);
-                String dir = null;
-                int dircode = Integer.parseInt(callType);
-                switch (dircode) {
-                    case CallLog.Calls.OUTGOING_TYPE:
-                        dir = "OUTGOING";
-                        break;
-
-                    case CallLog.Calls.INCOMING_TYPE:
-                        dir = "INCOMING";
-                        break;
-
-                    case CallLog.Calls.MISSED_TYPE:
-                        dir = "MISSED";
-                        break;
-                }
-                sb.append("\nPhone Number:--- " + phNumber + " \nCall Type:--- " + dir + " \nCall Date:--- " + callDayTime + " \nCall duration in sec :--- " + callDuration);
-                sb.append("\n----------------------------------");
-
-
-            }
-            managedCursor.close();
-            System.out.println("Testiiig"+sb);
-//            textView.setText(sb);
-        }
-        catch (SecurityException e)
-        {
-            System.out.println();
-            // lets the user know there is a problem with the code
+        if (ContextCompat.checkSelfPermission(context,android.Manifest.permission.READ_CALL_LOG) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    Activity#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for Activity#requestPermissions for more details.
+            return;
         }
 
+//        StringBuffer sb = new StringBuffer();
+//        Cursor cur = getContentResolver().query( CallLog.Calls.CONTENT_URI,null, null,null, android.provider.CallLog.Calls.DATE + " DESC");
+//
+//        int number = cur.getColumnIndex( CallLog.Calls.NUMBER );
+//        int duration = cur.getColumnIndex( CallLog.Calls.DURATION);
+//        sb.append("Call Details : \n");
+//        while ( cur.moveToNext() ) {
+//            String phNumber = cur.getString( number );
+//            String callDuration = cur.getString( duration );
+//            sb.append( "\nPhone Number:"+phNumber);
+//            break;
+//        }
+//        cur.close();
+//        String str=sb.toString();
+//        return str;
 
     }
 

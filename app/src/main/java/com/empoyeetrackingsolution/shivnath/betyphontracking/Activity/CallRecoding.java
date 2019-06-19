@@ -6,9 +6,14 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.location.Criteria;
+import android.location.Location;
+import android.location.LocationManager;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.ConnectivityManager;
@@ -18,18 +23,36 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.SeekBar;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.Volley;
 import com.empoyeetrackingsolution.shivnath.betyphontracking.R;
 import com.empoyeetrackingsolution.shivnath.betyphontracking.model.Incoming_Detect;
+import com.empoyeetrackingsolution.shivnath.betyphontracking.model.locationModel;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
@@ -37,6 +60,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import cafe.adriel.androidaudioconverter.AndroidAudioConverter;
+import cafe.adriel.androidaudioconverter.callback.IConvertCallback;
+import cafe.adriel.androidaudioconverter.model.AudioFormat;
 import io.realm.Realm;
 import io.realm.RealmResults;
 import okhttp3.Call;
@@ -48,7 +74,7 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-public class CallRecoding extends AppCompatActivity {
+public class CallRecoding extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     private ListView listview;
     private String mediaPath;
@@ -59,6 +85,17 @@ public class CallRecoding extends AppCompatActivity {
     ArrayList<String> songNames = new ArrayList<>();
     private RecyclerView recyclerView;
     ProgressDialog progressBar;
+    Spinner sp1,sp2,sp3;
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
 
 
     private class SongsLoaderAsyncTask extends AsyncTask<Void, String, Void> {
@@ -101,7 +138,7 @@ public class CallRecoding extends AppCompatActivity {
                 String songPath = path.getAbsolutePath();
                 String songName = path.getName();
                 publishProgress(songPath);
-                if (songPath.endsWith(".amr")) {
+                if (songPath.endsWith(".mp3")) {
                     loadedSongs.add(songPath);
                     songNames.add(songName.substring(0, songName.length() - 4));
                 }
@@ -140,6 +177,78 @@ public class CallRecoding extends AppCompatActivity {
         setContentView(R.layout.activity_call_recoding);
 
 
+        sp1 = findViewById(R.id.sp1);
+        sp2 = findViewById(R.id.sp2);
+        sp3 = findViewById(R.id.sp3);
+        final CardView cardView = findViewById(R.id.filetrOpt);
+        final ImageView imageView = findViewById(R.id.rec_filter);
+        final ImageView imageView1 = findViewById(R.id.rec_unfilter);
+
+        imageView1.setVisibility(View.INVISIBLE);
+
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                cardView.setVisibility(View.VISIBLE);
+                imageView1.setVisibility(View.VISIBLE);
+                imageView.setVisibility(View.INVISIBLE);
+            }
+        });
+
+        imageView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                cardView.setVisibility(View.GONE);
+                imageView.setVisibility(View.VISIBLE);
+                imageView1.setVisibility(View.INVISIBLE);
+            }
+        });
+
+
+        sp1.setOnItemSelectedListener(this);
+        sp2.setOnItemSelectedListener(this);
+        sp3.setOnItemSelectedListener(this);
+
+        List<String> categories = new ArrayList<String>();
+        categories.add("Select Call Type");
+        categories.add("Incoming call");
+        categories.add("Outgoing call");
+        categories.add("Missed call");
+
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(CallRecoding.this, android.
+                R.layout.simple_spinner_item, categories);
+
+
+        List<String> categories3 = new ArrayList<String>();
+        categories3.add("Today");
+        categories3.add("Yesterday");
+        categories3.add("Last 7 days");
+        categories3.add("Last 10 days");
+        categories3.add("Last 30 days");
+        categories3.add("This Month");
+        categories3.add("Last Month");
+
+        ArrayAdapter<String> dataAdapter3 = new ArrayAdapter<String>(CallRecoding.this, android.
+                R.layout.simple_spinner_item, categories3);
+
+        List<String> categories2 = new ArrayList<String>();
+        categories2.add("User 1");
+        categories2.add("User 2");
+        categories2.add("User 3");
+        categories2.add("User 4");
+        categories2.add("User 5");
+
+        ArrayAdapter<String> dataAdapter2 = new ArrayAdapter<String>(CallRecoding.this,
+                android.R.layout.simple_spinner_item, categories2);
+
+
+        sp1.setAdapter(dataAdapter);
+        sp2.setAdapter(dataAdapter2);
+        sp3.setAdapter(dataAdapter3);
+
+
         songsLoadingProgressBar = findViewById(R.id.myProgressBar);
 //        listview = findViewById(R.id.mListView);
         recyclerView = findViewById(R.id.recordlist);
@@ -147,6 +256,26 @@ public class CallRecoding extends AppCompatActivity {
         task = new SongsLoaderAsyncTask();
         task.execute();
 
+
+
+        File flacFile = new File(Environment.getExternalStorageDirectory(), "ETS/Rockstar.amr");
+        IConvertCallback callback = new IConvertCallback() {
+            @Override
+            public void onSuccess(File convertedFile) {
+
+            }
+
+            @Override
+            public void onFailure(Exception error) {
+
+            }
+        };
+
+        Toast.makeText(this, "Converting audio file...", Toast.LENGTH_SHORT).show();
+        AndroidAudioConverter.with(this)
+                .setFile(flacFile)
+                .setFormat(AudioFormat.MP3)
+                .setCallback(callback).convert();
     }
 
     @Override
@@ -215,6 +344,8 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyVie
                     Toast.makeText(context, "net not", Toast.LENGTH_SHORT).show();
 
                 }
+
+//                getfromServier();
 
             }
         });
@@ -335,26 +466,48 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyVie
 
     }
 
+    private void getfromServier() {
+
+        final ProgressDialog progressDialog = new ProgressDialog(context);
+        progressDialog.setMessage("Loading...");
+        progressDialog.show();
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest("http://159.65.145.32/api/recording/details/19/", new com.android.volley.Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response) {
+                for (int i = 0; i < response.length(); i++) {
+                    try {
+                        JSONObject jsonObject = response.getJSONObject(i);
+
+                        locationModel locationModel = new locationModel();
+                        String data1 = jsonObject.getString("user_id");
+
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                        progressDialog.dismiss();
+                    }
+                }
+
+            }
+        }, new com.android.volley.Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e("Volley", error.toString());
+                progressDialog.dismiss();
+            }
+        });
+        RequestQueue requestQueue = Volley.newRequestQueue(context);
+        requestQueue.add(jsonArrayRequest);
+
+    }
+
 
     private void postingData(final int position, final MyViewHolder holder) {
 
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
         final String value = preferences.getString("user_id", "0");
         String currentTime = preferences.getString("currentDate", "1");
-        String callType = preferences.getString("recodingType","0");
-        String recodingNumber = preferences.getString("recodingNumber","1");
 
-        System.out.println("recodingNumer"+recodingNumber);
-
-
-        Realm.init(context);
-        Realm realm = Realm.getDefaultInstance(); //creating  database oject
-        RealmResults<Incoming_Detect> results = realm.where(Incoming_Detect.class).findAllAsync();
-
-
-        String[] arrayString = songNames.get(position).split("_");
-
-        System.out.println("hjhjhjgj"+arrayString);
 
         OkHttpClient client = new OkHttpClient();
 
@@ -370,8 +523,8 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyVie
                 .addFormDataPart("user_id", value)
                 .addFormDataPart("file_name", "Call Recording")
                 .addFormDataPart("creation_datetime", currentTime)
-                .addFormDataPart("prospect_number","null")
-                .addFormDataPart("call_type","null")
+                .addFormDataPart("prospect_number","1234567891")
+                .addFormDataPart("call_type","incoming")
                 .build();
 
         Request request = new Request.Builder()

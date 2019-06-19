@@ -6,9 +6,66 @@
     android:layout_height="match_parent"
     tools:context=".Activity.Timelime">
 
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="Timeline"
+        app:titleTextColor="#fff"
+        android:background="@color/colorPrimary"
+        android:id="@+id/timelineTool">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_below="@id/timelineTool"
+        android:orientation="horizontal"
+        android:id="@+id/lay1">
+
+    <Spinner
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:padding="10dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/timelineTool"
+        android:id="@+id/linespi"/>
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="DD/MM/YYYY"
+        android:layout_marginRight="8dp"
+        android:editable="false"
+        android:drawableRight="@drawable/ic_dropdown"
+        android:layout_weight="1"
+        android:id="@+id/timelineCalender"
+        android:layout_toRightOf="@id/linespi"
+        android:layout_below="@id/timelineTool"
+        android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Apply"
+        android:background="@android:color/holo_red_light"
+        android:textColor="#fff"
+        android:id="@+id/linebtn"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_below="@id/lay1"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/linebtn"
+        android:layout_marginTop="8dp"
         android:id="@+id/timeRecycler">
 
     </androidx.recyclerview.widget.RecyclerView>

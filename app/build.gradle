@@ -57,6 +57,7 @@ dependencies {
     implementation 'com.github.zcweng:switch-button:0.0.3@aar'
     implementation 'com.github.adrielcafe:AndroidAudioConverter:0.0.8'
     implementation 'com.github.pwittchen:swipe-rx2:0.3.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
 
 }
 apply plugin: 'realm-android'

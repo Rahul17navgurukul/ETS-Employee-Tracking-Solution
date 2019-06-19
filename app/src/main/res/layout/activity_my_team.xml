@@ -7,168 +7,317 @@
     android:orientation="vertical"
     tools:context=".Activity.MyTeam">
 
-    <!--<ScrollView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content">-->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:title="My Team"
+        app:titleTextColor="#fff"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="10dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/myTeam"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textview_style"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="8dp"
+        android:id="@+id/layout1"
+        android:layout_marginRight="8dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manage Team"
+            android:textSize="20sp"
+            android:id="@+id/mTeam"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Master team with all members added"
+            android:layout_below="@+id/mTeam"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_marginTop="10dp"
+            android:id="@+id/tamad"
+            android:layout_centerHorizontal="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Owners :"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/tamad"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:id="@+id/owner"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="info@techmet"
+            android:id="@+id/ownmerName"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_toRightOf="@id/owner"
+            android:layout_below="@id/tamad"
+            android:layout_marginLeft="20dp"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mangers :"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_below="@id/ownmerName"
+            android:textSize="16sp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/man"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="abc"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_toRightOf="@id/man"
+            android:layout_below="@id/ownmerName"
+            android:layout_marginLeft="20dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/textview_style"
+        android:layout_marginLeft="8dp"
+        android:id="@+id/layout2"
+        android:layout_marginRight="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current User :"
+            android:id="@+id/cur"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:id="@+id/curentUser"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_toRightOf="@id/cur"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Active User :"
+            android:id="@+id/active"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/cur"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:id="@+id/activeUser"
+            android:layout_toRightOf="@id/active"
+            android:layout_below="@id/cur"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subscribed License :"
+            android:id="@+id/csub"
+            android:layout_below="@id/active"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:textColor="#000"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:id="@+id/subLicense"
+            android:layout_below="@id/active"
+            android:layout_toRightOf="@id/csub"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:textColor="#000"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Expiry Date :"
+            android:id="@+id/exp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/csub"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5/05/2019"
+            android:id="@+id/expireDate"
+            android:layout_below="@id/csub"
+            android:layout_toRightOf="@id/exp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_marginLeft="20dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout3"
+        android:background="@drawable/textview_style"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:padding="8dp"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:inputType="textPersonName"
+            android:layout_marginTop="8dp"
+            android:id="@+id/etName"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:id="@+id/etEmail"
+            android:inputType="textEmailAddress"
+            android:layout_below="@id/etName"
+            android:layout_marginTop="8dp"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etEmail"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:id="@+id/radogrp">
+
+
+            <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
-                android:gravity="center_vertical"
-                android:text="My-Team"
-                android:textSize="20sp" />
+                android:id="@+id/radiotelliCaller"
+                android:text="Tele Calling Agent"/>
 
-            <TextView
-                android:id="@+id/owner"
+            <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/myTeam"
-                android:layout_marginTop="20dp"
-                android:gravity="center_vertical"
-                android:text="Owner"
-                android:textSize="20sp" />
+                android:id="@+id/radioFieldEx"
+                android:text="Field Executive"/>
 
-            <TextView
+            <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/owner"
-                android:layout_marginTop="10dp"
-                android:gravity="center_vertical"
-                android:text="into@techmet"
-                android:textSize="20sp" />
+                android:text="Manager"
+                android:id="@+id/radioManager"/>
+        </RadioGroup>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/owner"
-                android:layout_marginTop="10dp"
-                android:gravity="center_vertical"
-                android:text="None"
-                android:textSize="20sp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send Invite E-mail"
+            android:layout_below="@id/radogrp"
+            android:background="@drawable/btn_style"
+            android:backgroundTint="@color/colorPrimary"
+            android:padding="5dp"
+            android:layout_marginLeft="16dp"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:id="@+id/sendInvite"/>
+    </RelativeLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/owner"
-                android:layout_marginTop="10dp"
-                android:gravity="center_vertical"
-                android:text="Current User: 2"
-                android:textSize="20sp" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        app:cardCornerRadius="5dp"
+        android:elevation="0dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/owner"
-                android:layout_marginTop="10dp"
-                android:gravity="center_vertical"
-                android:text="Active User: 2"
-                android:textSize="20sp" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:id="@+id/u"
+            android:layout_marginLeft="50dp"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/owner"
-                android:layout_marginTop="10dp"
-                android:gravity="center_vertical"
-                android:text="Subscribed License: 2"
-                android:textSize="20sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Role"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50dp"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/owner"
-                android:layout_marginTop="10dp"
-                android:gravity="center_vertical"
-                android:text="Expiry Date: 5/05/2019"
-                android:textSize="20sp" />
-
-            <EditText
+            <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:hint="Full name" />
+                android:layout_height="500dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:id="@+id/teamRecycler">
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:hint="Email Address" />
+            </androidx.recyclerview.widget.RecyclerView>
 
-            <androidx.appcompat.widget.AppCompatRadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tele Calling agent" />
 
-            <androidx.appcompat.widget.AppCompatRadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Field Executive" />
-
-            <androidx.appcompat.widget.AppCompatRadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Maneger" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginRight="20dp"
-                android:background="@color/colorPrimary"
-                android:text="Send invite E-mail"
-                android:textColor="#FFF" />
 
         </LinearLayout>
-
-        <!--<LinearLayout-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginTop="10dp"-->
-            <!--android:orientation="horizontal"-->
-            <!--android:weightSum="4">-->
-
-
-            <!--<TextView-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_below="@id/owner"-->
-                <!--android:layout_marginTop="10dp"-->
-                <!--android:gravity="center_vertical"-->
-                <!--android:text="Active User: 2"-->
-                <!--android:textSize="20sp" />-->
-
-
-            <!--<TextView-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_marginTop="10dp"-->
-                <!--android:text="Active User: 2"-->
-                <!--android:textSize="20sp" />-->
-
-            <!--<TextView-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_below="@id/owner"-->
-                <!--android:layout_marginTop="10dp"-->
-                <!--android:gravity="center_vertical"-->
-                <!--android:text="Active User: 2"-->
-                <!--android:textSize="20sp" />-->
-
-
-        <!--</LinearLayout>-->
-
-    <!--</ScrollView>-->
-
+    </ScrollView>
 </LinearLayout>

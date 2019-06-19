@@ -8,11 +8,16 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.app.DatePickerDialog;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.SearchView;
 import android.widget.TextView;
 
 import com.empoyeetrackingsolution.shivnath.betyphontracking.Fragment.IncomingCallFrag;
@@ -23,6 +28,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 import io.realm.Realm;
 
@@ -34,6 +40,9 @@ public class Frag_Nav extends AppCompatActivity {
     CardView cardView;
     ImageView imageView,unfiletrImg;
     TextView cardDate,cardAgent;
+
+    SearchView searchView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,39 +104,24 @@ public class Frag_Nav extends AppCompatActivity {
             }
         });
         cardView = findViewById(R.id.navCard);
-//        toolbar = findViewById(R.id.toolbar_class);
-//        toolbar.inflateMenu(R.menu.filter);
-//        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
-//            @Override
-//            public boolean onMenuItemClick(MenuItem item) {
-//
-//
-//                if(item.getItemId()==R.id.filetrMenu)
-//                {
-//                    cardView.setVisibility(View.VISIBLE);
-////                    item.setVisible(false);
-//
-//                }
-//
-//
-//                return false;
-//            }
-//        });
+        toolbar = findViewById(R.id.toolbar_class);
+        toolbar.inflateMenu(R.menu.searchfile);
+        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
 
-//        textView = findViewById(R.id.textview_call);
-//        getCall();
+
+
+
+                return true;
+            }
+        });
+
 
         bottomNavigationView = findViewById(R.id.navigation);
         final IncomingCallFrag incomingCall = new IncomingCallFrag();
         final OutgoingCallFrag outgoingCall = new OutgoingCallFrag();
         final MissCallFrag missCall = new MissCallFrag();
-
-//        RealmResults<Incoming_Detect> results = Realm.getDefaultInstance().where(Incoming_Detect.class).findAllAsync();
-//
-//        for (Incoming_Detect in :results){
-//
-//            Toast.makeText(this, in.getIncomingDate(), Toast.LENGTH_SHORT).show();
-//        }
 
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -153,6 +147,18 @@ public class Frag_Nav extends AppCompatActivity {
 
         bottomNavigationView.setSelectedItemId(R.id.in);
 
+    }
+
+    private void changeSearchViewTextColor(SearchView searchView) {
+
+        if (searchView != null) {
+            if (searchView instanceof ViewGroup) {
+                ViewGroup viewGroup = (ViewGroup) searchView;
+                for (int i = 0; i < viewGroup.getChildCount(); i++) {
+                    changeSearchViewTextColor((SearchView) viewGroup.getChildAt(i));
+                }
+            }
+        }
     }
 
     private void setFragment(Fragment fragment) {

@@ -10,9 +10,18 @@ import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
+import android.location.Criteria;
+import android.location.LocationManager;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.provider.CallLog;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
@@ -20,6 +29,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,7 +37,10 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.anychart.APIlib;
 import com.anychart.AnyChart;
 import com.anychart.AnyChartView;
@@ -44,37 +57,56 @@ import com.anychart.enums.Orientation;
 import com.anychart.enums.ScaleStackMode;
 import com.anychart.scales.Linear;
 import com.empoyeetrackingsolution.shivnath.betyphontracking.Adapter.InCallLogAdapter;
+import com.empoyeetrackingsolution.shivnath.betyphontracking.MainActivity;
 import com.empoyeetrackingsolution.shivnath.betyphontracking.R;
 import com.empoyeetrackingsolution.shivnath.betyphontracking.liveLocation;
 import com.empoyeetrackingsolution.shivnath.betyphontracking.model.AttendenceModel;
+import com.empoyeetrackingsolution.shivnath.betyphontracking.model.CallDurationCategory;
+import com.empoyeetrackingsolution.shivnath.betyphontracking.model.DashboardModel;
 import com.empoyeetrackingsolution.shivnath.betyphontracking.model.Incoming_Detect;
+import com.empoyeetrackingsolution.shivnath.betyphontracking.model.TotalCallDatum;
+import com.empoyeetrackingsolution.shivnath.betyphontracking.model.locationModel;
 import com.empoyeetrackingsolution.shivnath.betyphontracking.service.CallDetectService;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.navigation.NavigationView;
+import com.google.gson.Gson;
 import com.miguelcatalan.materialsearchview.MaterialSearchView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 import com.anychart.data.Set;
 
 import io.realm.Realm;
 import io.realm.RealmResults;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.RequestBody;
 
 public class DashBoard extends AppCompatActivity {
 
-    private TextView noofCall, noofOut, noofIn, noofMiss;
+    private TextView noofCall, noofOut, noofIn, noofMiss, talk_time;
     private Toolbar toolbar;
     AnyChartView anyChartView;
     AnyChartView baranychart;
     private InCallLogAdapter adapter;
-    private RealmResults<Incoming_Detect> incpmingCallList;
+    private List<Incoming_Detect> incpmingCallList;
     private MaterialSearchView mMaterialSearchView;
     private LinearLayout layout;
     private DrawerLayout drawerLayout;
@@ -87,6 +119,15 @@ public class DashBoard extends AppCompatActivity {
     String startDate;
     String newstartDate;
 
+    String[] list;
+
+    int allCalls = 0;
+    int missCall = 0;
+    int incomingCall = 0;
+    int outgoingCall = 0;
+    int talkTime = 0;
+
+    String logOutId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,22 +146,73 @@ public class DashBoard extends AppCompatActivity {
 
 
         Date date = Calendar.getInstance().getTime();
-        SimpleDateFormat sdf2 = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss" );
+        SimpleDateFormat sdf2 = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss");
         startDate = sdf2.format(date);
 
         switchCompat = findViewById(R.id.simpleSwitch);
         switchCompat.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                
-                if (switchCompat.isChecked()){
+
+                if (switchCompat.isChecked()) {
+
+                    SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(DashBoard.this);
+                    String value = preferences.getString("user_id", "0");
+
+                    OkHttpClient client = new OkHttpClient();
+
+                    JSONObject jsonObject = new JSONObject();
+                    try {
+                        jsonObject.put("user_id", value);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+                    MediaType JSON = MediaType.parse("application/json; charset=utf-8");
+
+                    RequestBody body = RequestBody.create(JSON, jsonObject.toString());
+
+                    okhttp3.Request request = new okhttp3.Request.Builder()
+                            .url("http://159.65.145.32/api/attendence")
+                            .method("POST", body)
+                            .build();
+
+                    client.newCall(request).enqueue(new Callback() {
+                        @Override
+                        public void onFailure(Call call, IOException e) {
+                            e.printStackTrace();
+                        }
+
+                        @Override
+                        public void onResponse(Call call, final okhttp3.Response response) throws IOException {
+                            if (!response.isSuccessful()) {
+                                throw new IOException("Unexpected code " + response);
+                            } else {
+                                String json = response.body().string();
+                                System.out.println("jsonUserId" + json);
+
+                                try {
+                                    JSONObject jsonobj = new JSONObject(json);
+                                    logOutId = jsonobj.getString("id");
+                                    System.out.println("logoutid " + logOutId);
+
+
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+
+
+
+                            }
+                        }
+                    });
 
                     Date currentTime = Calendar.getInstance().getTime();
                     SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
                     newstartDate = sdf.format(currentTime);
 
                     Date date = Calendar.getInstance().getTime();
-                    SimpleDateFormat sdf2 = new SimpleDateFormat("EEE, d MMM yyyy" );
+                    SimpleDateFormat sdf2 = new SimpleDateFormat("EEE, d MMM yyyy");
                     startDate = sdf2.format(date);
 
 
@@ -133,7 +225,6 @@ public class DashBoard extends AppCompatActivity {
                             AttendenceModel attendence = bgRealm.createObject(AttendenceModel.class);
                             attendence.setOnDutyTime(newstartDate);
                             attendence.setSartDate(startDate);
-
 
 
                         }
@@ -151,7 +242,49 @@ public class DashBoard extends AppCompatActivity {
                         }
                     });
 
-                }else {
+                } else {
+
+
+                    System.out.println("logoutid>>"+logOutId);
+
+                    OkHttpClient client = new OkHttpClient();
+
+                    JSONObject jsonObject = new JSONObject();
+                    try {
+                        jsonObject.put("id", logOutId);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+                    MediaType JSON = MediaType.parse("application/json; charset=utf-8");
+
+                    RequestBody body = RequestBody.create(JSON, jsonObject.toString());
+
+                    okhttp3.Request request = new okhttp3.Request.Builder()
+                            .url("http://159.65.145.32/api/attendence")
+                            .method("POST", body)
+                            .build();
+
+                    client.newCall(request).enqueue(new Callback() {
+                        @Override
+                        public void onFailure(Call call, IOException e) {
+                            e.printStackTrace();
+                        }
+
+                        @Override
+                        public void onResponse(Call call, final okhttp3.Response response) throws IOException {
+                            if (!response.isSuccessful()) {
+                                throw new IOException("Unexpected code " + response);
+                            } else {
+                                String json = response.body().string();
+                                System.out.println("LogoutRes " + json);
+
+
+
+
+                            }
+                        }
+                    });
 
                     Date currentTime = Calendar.getInstance().getTime();
                     SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
@@ -203,16 +336,71 @@ public class DashBoard extends AppCompatActivity {
         toggle.syncState();
         mMaterialSearchView = findViewById(R.id.searchView);
 
+        list = new String[]{"No of Call", "Incoming Call", "Outgoinh Call", "Missed call", "Talk-Time"};
+//        mMaterialSearchView.setSuggestions(list);
+
+        System.out.println("fkjvklf" + incpmingCallList);
+
+        mMaterialSearchView.bringToFront();
+
         mMaterialSearchView.setOnSearchViewListener(new MaterialSearchView.SearchViewListener() {
             @Override
             public void onSearchViewShown() {
+
+                Toast.makeText(DashBoard.this, "Searching", Toast.LENGTH_SHORT).show();
+
+                Realm realm = Realm.getDefaultInstance(); //creating  database oject
+                RealmResults<Incoming_Detect> results = realm.where(Incoming_Detect.class).findAllAsync();
+                results.load();
+
+                for (Incoming_Detect incoming_detect : results){
+
+                }
+
+                OkHttpClient client = new OkHttpClient();
+
+                JSONObject jsonObject = new JSONObject();
+                try {
+                    jsonObject.put("prospect_number", "7042353004");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+                MediaType JSON = MediaType.parse("application/json; charset=utf-8");
+
+                RequestBody body = RequestBody.create(JSON, jsonObject.toString());
+
+                okhttp3.Request request = new okhttp3.Request.Builder()
+                        .url("http://159.65.145.32/api/search")
+                        .method("POST", body)
+                        .build();
+
+                client.newCall(request).enqueue(new Callback() {
+                    @Override
+                    public void onFailure(Call call, IOException e) {
+                        e.printStackTrace();
+                    }
+
+                    @Override
+                    public void onResponse(Call call, final okhttp3.Response response) throws IOException {
+                        if (!response.isSuccessful()) {
+                            throw new IOException("Unexpected code " + response);
+                        } else {
+                            String json = response.body().string();
+                            System.out.println("searchResponse " + json);
+
+
+
+
+                        }
+                    }
+                });
 
             }
 
             @Override
             public void onSearchViewClosed() {
-//                final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1, SUGGESTION);
-//                listView.setAdapter(arrayAdapter);
+//
             }
         });
 
@@ -224,9 +412,6 @@ public class DashBoard extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-
-//                incpmingCallList = Realm.getDefaultInstance().where(Incoming_Detect.class).findAllAsync();
-//                adapter = new InCallLogAdapter(DashBoard.this, incpmingCallList);
 
                 return false;
             }
@@ -244,6 +429,7 @@ public class DashBoard extends AppCompatActivity {
         noofIn = findViewById(R.id.noofIncall);
         noofOut = findViewById(R.id.otgoinC);
         noofMiss = findViewById(R.id.misc);
+        talk_time = findViewById(R.id.talktime);
 
         toolbarMenuClick();
 //        askPermission();
@@ -276,7 +462,7 @@ public class DashBoard extends AppCompatActivity {
                 switch (id) {
                     case R.id.dash:
 //
-                        Toast.makeText(DashBoard.this, "My Dashboard", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(DashBoard.this, "My DashboardModel", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.profile:
                         Intent i1 = new Intent(DashBoard.this, MyTeam.class);
@@ -307,8 +493,25 @@ public class DashBoard extends AppCompatActivity {
                         break;
 
                     case R.id.attendence:
-                        Intent intent = new Intent(DashBoard.this,Attendence.class);
+                        Intent intent = new Intent(DashBoard.this, Attendence.class);
                         startActivity(intent);
+                        break;
+
+                    case R.id.callreport:
+                        Intent intent2 = new Intent(DashBoard.this, CallReport.class);
+                        startActivity(intent2);
+                        break;
+
+                    case R.id.logout:
+                        SharedPreferences preferences =getSharedPreferences("user_id",Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = preferences.edit();
+                        editor.clear();
+                        editor.remove("user_id");
+                        editor.commit();
+                        Intent log = new Intent(DashBoard.this, MainActivity.class);
+                        startActivity(log);
+                        finish();
+                        Toast.makeText(DashBoard.this, "Logout Successfull", Toast.LENGTH_SHORT).show();
                         break;
                     default:
                         return true;
@@ -352,14 +555,12 @@ public class DashBoard extends AppCompatActivity {
         data.add(new CustomDataEntry("P6", 60.7, 1507, 1007, 1907));
 
 
-
         Set set = Set.instantiate();
         set.data(data);
         Mapping column1Data = set.mapAs("{ x: 'x', value: 'value2' }");
         Mapping column2Data = set.mapAs("{ x: 'x', value: 'value3' }");
         Mapping column3Data = set.mapAs("{ x: 'x', value: 'value4' }");
         Mapping column4Data = set.mapAs("{ x: 'x', value: 'value4' }");
-
 
 
         cartesian.column(column1Data);
@@ -377,7 +578,7 @@ public class DashBoard extends AppCompatActivity {
 
     }
 
-    private class CustomDataEntry extends ValueDataEntry {
+    public static class CustomDataEntry extends ValueDataEntry {
         CustomDataEntry(String x, Number value, Number value2, Number value3, Number value4) {
             super(x, value);
             setValue("value2", value2);
@@ -401,68 +602,118 @@ public class DashBoard extends AppCompatActivity {
 
         anyChartView.setZoomEnabled(false);
 
-        List<DataEntry> data = new ArrayList<>();
-        data.add(new ValueDataEntry("0 sec", 50));
-        data.add(new ValueDataEntry("0 to 10 sec", 100));
-        data.add(new ValueDataEntry("11 to 30 sec", 150));
-        data.add(new ValueDataEntry("31 to 60 sec", 200));
-        data.add(new ValueDataEntry("61 to 180 sec", 250));
-        data.add(new ValueDataEntry("180 + sec", 300));
-        pie.data(data);
-        pie.title("Call Duration");
-        pie.labels().position("outside");
-        pie.legend()
-                .itemsLayout(LegendLayout.HORIZONTAL_EXPANDABLE)
-                .align(Align.BOTTOM);
-
-        anyChartView.setChart(pie);
 
     }
 
     private void getFromServer() {
 
 
-        String url = "http://159.65.145.32/api/dashboard/17/";
+        final String url = "http://159.65.145.32/api/dashboard/17/";
 
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
-                new Response.Listener<JSONObject>() {
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+                new Response.Listener<String>() {
                     @Override
-                    public void onResponse(JSONObject response) {
+                    public void onResponse(String response) {
+
 
                         try {
-                            JSONArray jsonArray = response.getJSONArray("user_call_data");
+                            JSONObject obj = new JSONObject(response);
 
-                            for (int i = 0; i < jsonArray.length(); i++) {
+                            System.out.println("testgghgh >> " + obj.getString("call_duration_category"));
+                            System.out.println("testgghgh >> " + obj.getString("user_call_data"));
+                            System.out.println("testgghgh >> " + obj.getString("total_call_data"));
 
-                                JSONObject user_call_data = jsonArray.getJSONObject(i);
 
-                                String user_id = user_call_data.getString("user_id");
-                                System.out.println("testttting" + user_id);
+                            JSONArray data = obj.getJSONArray("user_call_data");
+
+                            for (int i = 0; i != data.length(); i++) {
+
+                                JSONObject eachData = data.getJSONObject(i);
+                                String a = eachData.getString("call_type");
+                                String b = eachData.getString("talk_time");
+
+                                allCalls = allCalls + 1;
+
+                                noofCall.setText("No of calls " + allCalls);
+
+                                if (a.equals("incoming")) {
+
+                                    incomingCall = incomingCall + 1;
+                                    noofIn.setText("Incoming calls " + incomingCall);
+
+                                } else if (a.equals("out_going")) {
+
+                                    outgoingCall = outgoingCall + 1;
+                                    noofOut.setText("Outgoing calls " + outgoingCall);
+                                } else {
+
+                                    missCall = missCall + 1;
+                                    noofMiss.setText("Missed call " + missCall);
+                                }
+
+                                int c = Integer.parseInt(b);
+                                talkTime = talkTime + c;
+
+
+                                int tot_seconds = talkTime;
+                                int hours = tot_seconds / 3600;
+                                int minutes = (tot_seconds % 3600) / 60;
+                                int seconds = tot_seconds % 60;
+
+                                String timeString = String.format("%02d :  %02d : %02d : ", hours, minutes, seconds);
+
+                                talk_time.setText("Talktime " + timeString);
+
 
                             }
-                        } catch (JSONException e) {
+
+                            JSONObject reader = new JSONObject(response);
+                            JSONObject jsonObject = reader.getJSONObject("call_duration_category");
+
+                            Pie pie = AnyChart.pie();
+
+                            pie.setOnClickListener(new ListenersInterface.OnClickListener(new String[]{"x", "value"}) {
+                                @Override
+                                public void onClick(Event event) {
+                                    Toast.makeText(DashBoard.this, event.getData().get("x") + ":" + event.getData().get("value"), Toast.LENGTH_SHORT).show();
+                                }
+                            });
+
+                            anyChartView.setZoomEnabled(false);
+                            List<DataEntry> data2 = new ArrayList<>();
+                            data2.add(new ValueDataEntry("0 sec", Integer.parseInt(jsonObject.getString("0"))));
+                            data2.add(new ValueDataEntry("0 to 10 sec", Integer.parseInt(jsonObject.getString("0-10"))));
+                            data2.add(new ValueDataEntry("11 to 30 sec", Integer.parseInt(jsonObject.getString("11-30"))));
+                            data2.add(new ValueDataEntry("31 to 60 sec", Integer.parseInt(jsonObject.getString("31-60"))));
+                            data2.add(new ValueDataEntry("61 to 180 sec", Integer.parseInt(jsonObject.getString("61-180"))));
+                            data2.add(new ValueDataEntry("180 + sec", Integer.parseInt(jsonObject.getString("180+"))));
+                            pie.data(data2);
+                            pie.title("Call Duration");
+                            pie.labels().position("outside");
+                            pie.legend()
+                                    .itemsLayout(LegendLayout.HORIZONTAL_EXPANDABLE)
+                                    .align(Align.BOTTOM);
+
+                            anyChartView.setChart(pie);
+
+
+                        } catch (
+                                JSONException e) {
                             e.printStackTrace();
                         }
-
-
                     }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                error.printStackTrace();
-
-            }
-        });
-
-//        requestQueue.add(request);
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        //displaying the error in toast if occurrs
+                        Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
 
     }
-
-
-//    private void askPermission() {
-//        CheckPermission checkPermission = new CheckPermission();
-//        checkPermission.checkPermission(this);
-//    }
 
 
     @Override
@@ -485,5 +736,12 @@ public class DashBoard extends AppCompatActivity {
                 return false;
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        mMaterialSearchView.closeSearch();
+        mMaterialSearchView.clearFocus();
+        super.onBackPressed();
     }
 }

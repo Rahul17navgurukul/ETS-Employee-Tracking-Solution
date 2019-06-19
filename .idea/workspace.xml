@@ -8,7 +8,6 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="Outgoing number :" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="info" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
@@ -165,41 +164,27 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/release/app-release.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/release/app-release.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/release/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/release/output.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/example/shivnath/betyphontracking/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/empoyeetrackingsolution/shivnath/betyphontracking/ExampleInstrumentedTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/Activity/CallRecoding.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/CallRecoding.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/Activity/DashBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/DashBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/Activity/Frag_Nav.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/Frag_Nav.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/Activity/MyTeam.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/MyTeam.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/Activity/PlayerActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/PlayerActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/Activity/UserLocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/UserLocation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/Adapter/InCallLogAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Adapter/InCallLogAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/Adapter/MissCallLogAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Adapter/MissCallLogAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/Adapter/OtCallLogAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Adapter/OtCallLogAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/BaseApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/BaseApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/CallDetect.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/CallDetect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/Fragment/IncomingCallFrag.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Fragment/IncomingCallFrag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/Fragment/MissCallFrag.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Fragment/MissCallFrag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/Fragment/OutgoingCallFrag.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Fragment/OutgoingCallFrag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/liveLocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/liveLocation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/model/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/model/Dashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/model/Incoming_Detect.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/model/Incoming_Detect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/model/Miss_Detect.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/model/Miss_Detect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/model/Outgoing_Detect.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/model/Outgoing_Detect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/service/CallDetectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/service/CallDetectService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/service/CallHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/service/CallHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/service/CheckPermission.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/service/CheckPermission.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_dash_board.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_dash_board.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/Attendence.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/Attendence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/CallRecoding.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/CallRecoding.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/DashBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/DashBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/Frag_Nav.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/Frag_Nav.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/MyTeam.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/MyTeam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/Timelime.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/Timelime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/UserLocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/UserLocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Adapter/InCallLogAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Adapter/InCallLogAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/CallDetect.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/CallDetect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/model/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/model/DashboardModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/service/CallHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/service/CallHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/textview_style.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/textview_style.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_attendence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_attendence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_call_recoding.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_call_recoding.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_location.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_location.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/record_card.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/record_card.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_my_team.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_my_team.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_timelime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_timelime.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/frag_nav.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/frag_nav.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/item_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/item_menu.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/example/shivnath/betyphontracking/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/empoyeetrackingsolution/shivnath/betyphontracking/ExampleUnitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -215,51 +200,75 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/DashBoard.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="428">
+              <caret line="626" column="80" selection-start-line="626" selection-start-column="80" selection-end-line="626" selection-end-column="80" />
+              <folding>
+                <element signature="e#15461#18293#0" />
+                <element signature="method#barChart2#0;class#DashBoard#0" />
+                <element signature="method#CustomDataEntry#0;class#CustomDataEntry#0;class#DashBoard#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/Attendence.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="464">
+              <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="valueResourceFile" />
-        <option value="layoutResourceFile_vertical" />
         <option value="resourceFile" />
         <option value="Class" />
         <option value="layoutResourceFile" />
+        <option value="layoutResourceFile_vertical" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>filePath</find>
-      <find>size</find>
-      <find>fileName</find>
-      <find>playButton</find>
-      <find>parseJson</find>
-      <find>testttting</find>
-      <find>per</find>
-      <find>permis</find>
-      <find>FileUploading &gt;&gt;&gt;</find>
-      <find>Testiiig</find>
-      <find>newDate</find>
-      <find>run</find>
-      <find>something</find>
-      <find>color</find>
-      <find>item_menu</find>
-      <find>Something</find>
-      <find>mediapath</find>
-      <find>Calldetstt</find>
-      <find>switch</find>
-      <find>gett</find>
-      <find>`</find>
-      <find>getting location</find>
-      <find>recodingNumer</find>
-      <find>songName</find>
-      <find>songPathhhhh</find>
-      <find>callRecoder</find>
-      <find>hgdhghdfghf</find>
       <find>hjhjhjgj</find>
       <find>creation</find>
       <find>currentTime</find>
+      <find>jrfjerje</find>
+      <find>testttting</find>
+      <find>jdhjdhf</find>
+      <find>jfdghd</find>
+      <find>Testiiig</find>
+      <find>vmkmfgvkmfg</find>
+      <find>fvfvdvd</find>
+      <find>too</find>
+      <find>fkjvklf</find>
+      <find>jfhjfhj</find>
+      <find>hfhfhfhf</find>
+      <find>jkkjjjj</find>
+      <find>hour</find>
+      <find>hhhh</find>
+      <find>jhsfjs</find>
+      <find>TotalIncomg</find>
+      <find>talk-time</find>
+      <find>ttttttt</find>
+      <find>jaimatadi</find>
+      <find>timetesting</find>
+      <find>testgghgh</find>
+      <find>blabla</find>
+      <find>Attendece</find>
+      <find>jsonUserId</find>
+      <find>logoutid</find>
+      <find>toolba</find>
+      <find>searchResponse</find>
     </findStrings>
   </component>
   <component name="GenerateSignedApkSettings">
@@ -273,26 +282,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/menu/Unfilter.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/Activity/Frag_Nav.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/frag_nav.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_call_recoding.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/service/CheckPermission.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/Adapter/InCallLogAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/custom_call_log_list_card.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/model/Incoming_Detect.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/model/Attendence.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/BaseApplication.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/Attendence.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/model/AttendenceModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/Adapter/AttendenceAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_attendence.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/attence_custom.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/menu/item_menu.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/Activity/DashBoard.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable-v24/textview_style.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_visit_track.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/Activity/VisitTrack.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/Activity/UserLocation.java" />
@@ -303,35 +293,54 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/service/CallHelper.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/shivnath/betyphontracking/Activity/CallRecoding.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/record_card.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/DashBoard.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_dash_board.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/Frag_Nav.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/liveLocation.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/model/locationModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/service/CallHelper.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/CallDetect.java" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/border.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_location.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/UserLocation.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_timelime.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Timelime.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/CallRecoding.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/model/TimelineModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/Timelime.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/custom_timeline.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Adapter/TimelineAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Adapter/InCallLogAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable-v24/textview_style.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/model/MyTeamModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/testing.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/custom_my_team.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Adapter/MyTeamAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/model/DashboardModel.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/service/CallHelper.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/CallDetect.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_my_team.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/MyTeam.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/CallRecoding.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_call_recoding.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_location.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/spinner_shape.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_timelime.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/Timelime.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/UserLocation.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/searchfile.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/frag_nav.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/Frag_Nav.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/item_menu.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/logout_menu.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_call_report.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_attendence.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/CallReport.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/Attendence.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/DashBoard.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="55" />
-    <option name="y" value="-4" />
-    <option name="width" value="1368" />
-    <option name="height" value="766" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -341,6 +350,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="android" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -371,37 +392,18 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="betyphontracking" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="Adapter" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="android" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="betyphontracking" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="Fragment" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
             </path>
             <path>
               <item name="android" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="betyphontracking" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="android" type="1abcf292:AndroidViewProjectNode" />
-              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="android" type="b2602c69:ProjectViewProjectNode" />
-              <item name="android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
           </expand>
           <select />
@@ -418,7 +420,8 @@
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
     <property name="device.picker.selection" value="S6L3Y18404000064" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Release.key" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/RCSearchFilter" />
     <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -430,6 +433,7 @@
   </component>
   <component name="RecentsManager">
     <key name="android.template.packageName">
+      <recent name="com.empoyeetrackingsolution.shivnath.betyphontracking.Activity" />
       <recent name="com.empoyeetrackingsolution.shivnath.betyphontracking" />
       <recent name="com.example.shivnath.betyphontracking.Activity" />
       <recent name="com.example.shivnath.betyphontracking" />
@@ -444,11 +448,11 @@
       <recent name="com.example.shivnath.betyphontracking.Adapter" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
       <recent name="$PROJECT_DIR$/app/src/main/res/menu" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/model" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
       <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi" />
-      <recent name="$PROJECT_DIR$/app/src/main/res" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -572,9 +576,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-11" width="1368" height="780" extended-state="7" />
+    <frame x="-1" y="-11" width="1368" height="780" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992248" visible="true" weight="0.18409091" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4992248" visible="true" weight="0.18409091" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Resources Explorer" order="3" sideWeight="0.5007752" side_tool="true" weight="0.25757575" />
@@ -585,7 +590,7 @@
       <window_info id="Favorites" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32868218" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924242" weight="0.46666667" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924242" weight="0.5968992" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -593,9 +598,9 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32868218" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3255814" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007576" side_tool="true" weight="0.46666667" />
-      <window_info anchor="bottom" id="Build" order="10" weight="0.438949" />
+      <window_info anchor="bottom" id="Build" order="10" weight="0.4372093" />
       <window_info anchor="bottom" id="Android Profiler" order="11" />
-      <window_info anchor="bottom" id="Logcat" order="12" weight="0.32868218" />
+      <window_info anchor="bottom" id="Logcat" order="12" weight="0.5922481" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -627,11 +632,11 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32868218" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3255814" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007576" side_tool="true" weight="0.46666667" />
-      <window_info anchor="bottom" id="Build" order="10" weight="0.44186047" />
+      <window_info anchor="bottom" id="Build" order="10" weight="0.43875968" />
       <window_info anchor="bottom" id="Android Profiler" order="11" />
-      <window_info anchor="bottom" id="Logcat" order="12" weight="0.32868218" />
+      <window_info anchor="bottom" id="Logcat" order="12" weight="0.5922481" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -646,345 +651,23 @@
       <window_info anchor="right" id="Assistant" order="11" weight="0.32954547" />
     </layout-to-restore>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/Frag_Nav.java</url>
+          <line>173</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/frag_nav.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="69" column="45" selection-start-line="69" selection-start-column="45" selection-end-line="69" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.10.0/e99b7b608968f16b07104b93e62cb90701174d0/okhttp-3.10.0-sources.jar!/okhttp3/Request.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.10.0/7ef0f1d95bf4c0b3ba30bbae25e0e562b05cf75e/okhttp-3.10.0.jar!/okhttp3/Response.class">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.10.0/7ef0f1d95bf4c0b3ba30bbae25e0e562b05cf75e/okhttp-3.10.0.jar!/okhttp3/Request.class">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.PhilJay/MPAndroidChart/v2.0.9/affc1c5dc4fb5b113e48bc29f786b9e338a0c9e0/MPAndroidChart-v2.0.9-sources.jar!/com/github/mikephil/charting/charts/PieChart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/service/CheckPermission.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_call_log_list_card.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/model/Dashboard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="200" column="1" lean-forward="true" selection-start-line="200" selection-start-column="1" selection-end-line="200" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/model/Incoming_Detect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-          <folding>
-            <element signature="e#367#368#0" expanded="true" />
-            <element signature="e#394#395#0" expanded="true" />
-            <element signature="e#435#436#0" expanded="true" />
-            <element signature="e#467#468#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Adapter/InCallLogAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="34" column="11" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_call_recoding.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-27">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/BaseApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="16" column="47" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/model/AttendenceModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-          <folding>
-            <element signature="e#327#328#0" expanded="true" />
-            <element signature="e#375#376#0" expanded="true" />
-            <element signature="e#415#416#0" expanded="true" />
-            <element signature="e#449#450#0" expanded="true" />
-            <element signature="e#479#480#0" expanded="true" />
-            <element signature="e#525#526#0" expanded="true" />
-            <element signature="e#563#564#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_attendence.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/item_menu.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="43" column="23" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_visit_track.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/model/Testing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-          <folding>
-            <element signature="e#179#180#0" expanded="true" />
-            <element signature="e#206#207#0" expanded="true" />
-            <element signature="e#247#248#0" expanded="true" />
-            <element signature="e#279#280#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.aykuttasil/CallRecorder/1.5.2/d3bf0284f7ef410869b5e10f15af709f94f3473d/CallRecorder-1.5.2-sources.jar!/com/aykuttasil/callrecord/CallRecord.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/record_card.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="40" selection-start-line="26" selection-start-column="11" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/Frag_Nav.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="65" column="48" lean-forward="true" selection-start-line="65" selection-start-column="48" selection-end-line="65" selection-end-column="48" />
-          <folding>
-            <element signature="e#2016#2680#0" expanded="true" />
-            <element signature="e#2679#2680#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/model/locationModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-          <folding>
-            <element signature="e#295#296#0" expanded="true" />
-            <element signature="e#345#346#0" expanded="true" />
-            <element signature="e#387#388#0" expanded="true" />
-            <element signature="e#422#423#0" expanded="true" />
-            <element signature="e#453#454#0" expanded="true" />
-            <element signature="e#501#502#0" expanded="true" />
-            <element signature="e#541#542#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/de5c128357170725becd18c95671e168/jars/classes.jar!/com/google/android/gms/maps/GoogleMap.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="287" column="24" lean-forward="true" selection-start-line="287" selection-start-column="24" selection-end-line="287" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/de5c128357170725becd18c95671e168/jars/classes.jar!/com/google/android/gms/maps/model/LatLng.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/VisitTrack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="49" column="55" selection-start-line="49" selection-start-column="45" selection-end-line="49" selection-end-column="55" />
-          <folding>
-            <marker date="1560571059385" expanded="false" signature="3787:3866" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_dash_board.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="39" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="16" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="58" column="18" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-v24/textview_style.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/border.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_location.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_location.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="89" column="42" selection-start-line="89" selection-start-column="42" selection-end-line="89" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1161">
-          <caret line="59" column="19" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_timelime.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Fragment/IncomingCallFrag.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="64" column="9" lean-forward="true" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/service/CallDetectService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/service/CallHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="43" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="52" column="12" lean-forward="true" selection-start-line="52" selection-start-column="12" selection-end-line="57" selection-end-column="29" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/CallRecoding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="372" column="58" lean-forward="true" selection-start-line="372" selection-start-column="58" selection-end-line="372" selection-end-column="58" />
-          <folding>
-            <element signature="method#RecyclerViewAdapter#0;class#RecyclerViewAdapter#0" />
-            <element signature="method#onCreateViewHolder#0;class#RecyclerViewAdapter#0" />
-            <element signature="method#onBindViewHolder#0;class#RecyclerViewAdapter#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/liveLocation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="98" column="65" selection-start-line="98" selection-start-column="54" selection-end-line="98" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/UserLocation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="118" column="78" selection-start-line="118" selection-start-column="61" selection-end-line="118" selection-end-column="78" />
-          <folding>
-            <element signature="method#onLocationChanged#0;class#UserLocation#0" />
-            <element signature="method#onStatusChanged#0;class#UserLocation#0" />
-            <element signature="method#onProviderEnabled#0;class#UserLocation#0" />
-            <element signature="method#onProviderDisabled#0;class#UserLocation#0" />
-            <marker date="1560657193839" expanded="true" signature="7022:7036" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1013,23 +696,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/CallDetect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="317" column="57" lean-forward="true" selection-start-line="317" selection-start-column="57" selection-end-line="317" selection-end-column="57" />
-          <folding>
-            <element signature="method#checkState#0;class#CallDetect#0" />
-            <element signature="method#onCallStateChanged#0;class#CallDetect#0" />
-            <element signature="method#onIncomingCallEnded#0;class#CallDetect#0" />
-            <element signature="method#postingIncoming#0;class#CallDetect#0" />
-            <element signature="method#callDuration#0;class#CallDetect#0" />
-            <element signature="method#postingOutgoing#0;class#CallDetect#0" />
-            <element signature="method#onMissedCall#0;class#CallDetect#0" />
-            <element signature="method#postingMissedCall#0;class#CallDetect#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Adapter/AttendenceAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9">
@@ -1040,47 +706,410 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/Attendence.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_timeline.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
+        <state relative-caret-position="1170">
+          <caret line="65" column="48" selection-start-line="65" selection-start-column="48" selection-end-line="65" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/DashBoard.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Adapter/InCallLogAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="109" lean-forward="true" selection-start-line="106" selection-start-column="8" selection-end-line="109" />
+        <state relative-caret-position="374">
+          <caret line="154" column="56" lean-forward="true" selection-start-line="154" selection-start-column="56" selection-end-line="154" selection-end-column="56" />
           <folding>
-            <element signature="method#PieChartData#0;class#DashBoard#0" />
+            <element signature="e#1836#1844#0" expanded="true" />
+            <element signature="e#4665#5740#0" expanded="true" />
+            <element signature="e#5739#5740#0" expanded="true" />
+            <element signature="e#2086#2087#0" expanded="true" />
+            <element signature="e#2134#2135#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/btn_style.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/model/locationModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+          <folding>
+            <element signature="e#295#296#0" expanded="true" />
+            <element signature="e#345#346#0" expanded="true" />
+            <element signature="e#387#388#0" expanded="true" />
+            <element signature="e#422#423#0" expanded="true" />
+            <element signature="e#453#454#0" expanded="true" />
+            <element signature="e#501#502#0" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Adapter/TimelineAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="50" column="84" selection-start-line="50" selection-start-column="84" selection-end-line="50" selection-end-column="84" />
+        <state relative-caret-position="321">
+          <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1428#1429#0" expanded="true" />
-            <element signature="e#1467#1468#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-v24/textview_style.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/model/MyTeamModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <element signature="e#144#145#0" expanded="true" />
+            <element signature="e#171#172#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/testing.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_my_team.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="59" column="52" selection-start-line="59" selection-start-column="52" selection-end-line="59" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/service/CallHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="162" column="63" selection-start-line="162" selection-start-column="63" selection-end-line="162" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/model/UserCallDatum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/record_card.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="40" selection-start-line="26" selection-start-column="11" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_my_team.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="221" column="37" lean-forward="true" selection-start-line="221" selection-start-column="37" selection-end-line="221" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/MyTeam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_location.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="61" column="40" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Adapter/MyTeamAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="63" column="47" selection-start-line="56" selection-start-column="8" selection-end-line="63" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/spinner_shape.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_timelime.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/Timelime.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+        <state relative-caret-position="411">
+          <caret line="102" column="38" selection-start-line="102" selection-start-column="38" selection-end-line="102" selection-end-column="38" />
+          <folding>
+            <element signature="e#3034#4110#0" expanded="true" />
+            <element signature="e#3483#3937#0" expanded="true" />
+            <element signature="e#3936#3937#0" expanded="true" />
+            <element signature="e#4109#4110#0" expanded="true" />
+            <element signature="method#getDataFromServer#0;class#Timelime#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_timeline.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/searchfile.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="65" column="48" selection-start-line="65" selection-start-column="48" selection-end-line="65" selection-end-column="48" />
+        <state relative-caret-position="144">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_incoming_call.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="34" lean-forward="true" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Fragment/IncomingCallFrag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.AnyChart/AnyChart-Android/1.1.2/7f85a378197959655268a7e0e5d229428d1b9857/AnyChart-Android-1.1.2-sources.jar!/com/anychart/chart/common/dataentry/DataEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_dash_board.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3870">
+          <caret line="225" selection-start-line="225" selection-end-line="225" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/Frag_Nav.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+          <folding>
+            <element signature="e#1773#2849#0" expanded="true" />
+            <element signature="e#2848#2849#0" expanded="true" />
+            <element signature="e#3803#5206#0" expanded="true" />
+            <element signature="e#5205#5206#0" expanded="true" />
+            <element signature="e#5655#5684#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/frag_nav.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/model/TotalCallDatum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/model/DashboardModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/UserLocation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="174" column="43" selection-start-line="113" selection-start-column="8" selection-end-line="174" selection-end-column="43" />
+          <folding>
+            <element signature="method#onLocationChanged#0;class#UserLocation#0" />
+            <element signature="method#onStatusChanged#0;class#UserLocation#0" />
+            <element signature="method#onProviderEnabled#0;class#UserLocation#0" />
+            <element signature="method#onProviderDisabled#0;class#UserLocation#0" />
+            <marker date="1560776393674" expanded="true" signature="7343:7357" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/model/CallDurationCategory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-28/org/json/JSONObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="391" selection-start-line="391" selection-end-line="391" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.AnyChart/AnyChart-Android/1.1.2/7f85a378197959655268a7e0e5d229428d1b9857/AnyChart-Android-1.1.2-sources.jar!/com/anychart/charts/Pie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="562" column="34" selection-start-line="562" selection-start-column="34" selection-end-line="562" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="140" selection-start-line="136" selection-start-column="24" selection-end-line="140" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/CallDetect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="388" lean-forward="true" selection-start-line="386" selection-start-column="8" selection-end-line="388" />
+          <folding>
+            <element signature="method#checkState#0;class#CallDetect#0" />
+            <element signature="method#onIncomingCallEnded#0;class#CallDetect#0" />
+            <element signature="method#postingIncoming#0;class#CallDetect#0" />
+            <element signature="method#onMissedCall#0;class#CallDetect#0" />
+            <element signature="method#postingMissedCall#0;class#CallDetect#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/item_menu.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="55" column="20" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/logout_menu.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="62" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_call_recoding.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="119" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_call_report.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/CallReport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+          <folding>
+            <element signature="e#2593#2785#0" expanded="true" />
+            <element signature="e#2784#2785#0" expanded="true" />
+            <element signature="method#CustomDataEntry#0;class#CustomDataEntry#0;class#CallReport#0" />
+            <element signature="method#getFromServer#0;class#CallReport#0" />
+            <element signature="e#2589#6741#0" />
+            <element signature="method#PieChartData#0;class#CallReport#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_attendence.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="57" column="43" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/CallRecoding.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="206" column="11" selection-start-line="186" selection-start-column="8" selection-end-line="206" selection-end-column="11" />
+          <folding>
+            <element signature="class#RecyclerViewAdapter#0" />
+            <element signature="method#RecyclerViewAdapter#0;class#RecyclerViewAdapter#0" />
+            <element signature="method#onBindViewHolder#0;class#RecyclerViewAdapter#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/model/Incoming_Detect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/DashBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="626" column="80" selection-start-line="626" selection-start-column="80" selection-end-line="626" selection-end-column="80" />
+          <folding>
+            <element signature="e#15461#18293#0" />
+            <element signature="method#barChart2#0;class#DashBoard#0" />
+            <element signature="method#CustomDataEntry#0;class#CustomDataEntry#0;class#DashBoard#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/empoyeetrackingsolution/shivnath/betyphontracking/Activity/Attendence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
         </state>
       </provider>
     </entry>

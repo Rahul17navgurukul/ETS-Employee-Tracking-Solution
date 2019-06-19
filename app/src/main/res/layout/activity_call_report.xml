@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.CallReport">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:id="@+id/callReportTool"
+        app:title="Call Report"
+        app:titleTextColor="#fff"
+        />
+
+
+    <ScrollView
+        android:id="@+id/scroll1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_below="@id/callReportTool"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/dash_toolbar"
+            android:orientation="vertical">
+            >
+
+            <TextView
+                android:id="@+id/noofcall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/btn_style"
+                android:gravity="center"
+                android:text="No of call"
+                android:textSize="25sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/noofIncall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/noofcall"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/btn_style"
+                android:gravity="center"
+                android:text="Incoming Call : "
+                android:textSize="25sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/otgoinC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/noofIncall"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/btn_style"
+                android:gravity="center"
+                android:text="Outgoing call : "
+                android:textSize="25sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/misc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/otgoinC"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/btn_style"
+                android:gravity="center"
+                android:text="Missed calls:"
+                android:textSize="25sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/talktime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/misc"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/btn_style"
+                android:gravity="center"
+                android:text="Talk-Time "
+                android:textSize="25sp"
+                android:textStyle="italic" />
+
+            <!--<TextView-->
+            <!--android:id="@+id/a"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/talktime"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:background="@drawable/btn_style"-->
+            <!--android:gravity="center"-->
+            <!--android:text="Travelling: 15km"-->
+            <!--android:textSize="25sp"-->
+            <!--android:textStyle="italic" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/b"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/a"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:background="@drawable/btn_style"-->
+            <!--android:gravity="center"-->
+            <!--android:text="Visit : 3"-->
+            <!--android:textSize="25sp"-->
+            <!--android:textStyle="italic" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/c"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/b"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:background="@drawable/btn_style"-->
+            <!--android:gravity="center"-->
+            <!--android:text="Prospect Contacted"-->
+            <!--android:textSize="25sp"-->
+            <!--android:textStyle="italic" />-->
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp">
+
+                <com.anychart.AnyChartView
+                    android:id="@+id/any_chart_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:layout_marginTop="20dp"
+                    />
+
+                <com.anychart.AnyChartView
+                    android:id="@+id/barchart22"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:padding="10dp"
+                    android:layout_below="@id/any_chart_view"
+                    android:layout_marginTop="20dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12-01"
+                    android:id="@+id/one"
+                    android:layout_below="@id/barchart22"
+                    android:layout_marginLeft="65dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="01-02"
+                    android:id="@+id/two"
+                    android:layout_below="@id/barchart22"
+                    android:layout_toRightOf="@+id/one"
+                    android:layout_marginLeft="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="02-03"
+                    android:id="@+id/three"
+                    android:layout_below="@id/barchart22"
+                    android:layout_toRightOf="@+id/two"
+                    android:layout_marginLeft="15dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="03-04"
+                    android:id="@+id/four"
+                    android:layout_below="@id/barchart22"
+                    android:layout_toRightOf="@+id/three"
+                    android:layout_marginLeft="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="04-05"
+                    android:id="@+id/five"
+                    android:layout_below="@id/barchart22"
+                    android:layout_toRightOf="@+id/four"
+                    android:layout_marginLeft="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="05-06"
+                    android:id="@+id/six"
+                    android:layout_below="@id/barchart22"
+                    android:layout_toRightOf="@+id/five"
+                    android:layout_marginLeft="15dp"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

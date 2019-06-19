@@ -1,11 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Activity.CallRecoding">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rectool"
+        app:title="Call Recoding"
+        app:titleTextColor="#fff"
+        android:background="@color/colorPrimary"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_filter"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/rec_filter"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_filter"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/rec_unfilter"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rectool"
+        android:id="@+id/filetrOpt"
+        android:visibility="gone"
+        android:padding="8dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sp1">
+        </Spinner>
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sp2"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50dp">
+        </Spinner>
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sp3"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/sp1">
+            </Spinner>
+
+            <EditText
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:hint="min"
+                android:background="@drawable/textview_style"
+                android:padding="8dp"
+                android:layout_marginTop="10dp"
+                android:inputType="number"
+                android:layout_marginRight="120dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/sp2"
+                />
+
+            <EditText
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:hint="max"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/textview_style"
+                android:padding="8dp"
+                android:inputType="number"
+                android:id="@+id/max"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/sp2"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sp3"
+                android:text="Apply"
+                android:background="@android:color/holo_red_light"
+                android:textColor="#fff"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"/>
+
+           <Button
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Downlaod"
+               android:layout_marginTop="10dp"
+               android:background="@color/colorPrimary"
+               android:layout_marginRight="20dp"
+               android:layout_below="@id/max"
+               android:layout_alignParentRight="true"
+               android:textColor="#fff"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
 
     <ProgressBar
         android:id="@+id/myProgressBar"
@@ -15,11 +129,14 @@
         android:indeterminate="true"
         android:indeterminateBehavior="cycle"
         android:visibility="gone"
+        android:layout_below="@id/filetrOpt"
         />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/filetrOpt"
+        android:layout_marginTop="8dp"
         android:id="@+id/recordlist">
 
     </androidx.recyclerview.widget.RecyclerView>
@@ -32,4 +149,4 @@
         <!--/>-->
 
 
-</LinearLayout>
+</RelativeLayout>

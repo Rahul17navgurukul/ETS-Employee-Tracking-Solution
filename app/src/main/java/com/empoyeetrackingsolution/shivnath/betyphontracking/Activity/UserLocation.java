@@ -8,14 +8,17 @@ import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.android.volley.DefaultRetryPolicy;
@@ -45,12 +48,13 @@ import org.json.JSONObject;
 
 public class UserLocation extends AppCompatActivity implements OnMapReadyCallback, LocationListener, View.OnClickListener, GoogleMap.OnMarkerClickListener {
 
-    private TextView timeline, livetrack;
+    private Button timeline, livetrack;
     GoogleMap mMap;
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
     String url = "http://159.65.145.32/api/geofence/details/17/";
 
     private Swipe swipe = new Swipe();
+    String value;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +62,10 @@ public class UserLocation extends AppCompatActivity implements OnMapReadyCallbac
         setContentView(R.layout.activity_location);
 
         timeline =findViewById(R.id.timeline);
-        livetrack = findViewById(R.id.liveTrack);
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(UserLocation.this);
+        value = preferences.getString("user_id", "0");
+
+//        livetrack = findViewById(R.id.liveTrack);
 
         timeline.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -120,7 +127,7 @@ public class UserLocation extends AppCompatActivity implements OnMapReadyCallbac
 
                         mMap.addMarker(new MarkerOptions()
                                 .position(new LatLng(Double.parseDouble(data2), Double.parseDouble(data3)))
-                                .title(Double.valueOf(data2).toString() + "," + Double.valueOf(data3).toString())
+                                .title("User-Id "+value+" "+"lat "+ Double.valueOf(data2).toString() + "," + "log "+Double.valueOf(data3).toString())
                                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
                         );
 
@@ -132,20 +139,22 @@ public class UserLocation extends AppCompatActivity implements OnMapReadyCallbac
                                 != PackageManager.PERMISSION_GRANTED) {
                             return;
                         }
-                        Location location = locationManager.getLastKnownLocation(locationManager.getBestProvider(criteria, false));
-                        if (location != null) {
-                            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(), location.getLongitude()), 13));
 
-                            CameraPosition cameraPosition = new CameraPosition.Builder()
-                                    .target(new LatLng(location.getLatitude(), location.getLongitude()))      // Sets the center of the map to location user
-                                    .zoom(17)
-                                    .bearing(90)
-                                    .tilt(40)
-                                    .build();
-                            mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+                        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(20.5937, 78.9629), 5));
+//
+//                        Location location = locationManager.getLastKnownLocation(locationManager.getBestProvider(criteria, false));
+//                        if (location != null) {
+
+//                            CameraPosition cameraPosition = new CameraPosition.Builder()
+//                                    .target(new LatLng(location.getLatitude(), location.getLongitude()))      // Sets the center of the map to location user
+//                                    .zoom(17)
+//                                    .bearing(90)
+//                                    .tilt(40)
+//                                    .build();
+//                            mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
                             progressDialog.dismiss();
 
-                        }
+//                        }
 
                         System.out.println("getting location "+locationModel.getLatitude()+" "+locationModel.getLongitute());
                     } catch (JSONException e) {

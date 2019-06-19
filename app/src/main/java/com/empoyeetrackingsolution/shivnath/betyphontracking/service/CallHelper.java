@@ -160,8 +160,8 @@ public class CallHelper {
                 .setRecordFileName(new SimpleDateFormat("HH:mm:ss").format(new Date()))
                 .setRecordDirName("ETS")
                 .setRecordDirPath(Environment.getExternalStorageDirectory().getPath())
-                .setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB)
-                .setOutputFormat(MediaRecorder.OutputFormat.AAC_ADTS)
+                .setAudioEncoder(MediaRecorder.AudioEncoder.AAC)
+                .setOutputFormat(MediaRecorder.OutputFormat.MPEG_4)
                 .setAudioSource(MediaRecorder.AudioSource.VOICE_COMMUNICATION)
                 .setShowPhoneNumber(true)
                 .build();
