@@ -218,29 +218,7 @@ public class DashBoard extends AppCompatActivity {
 
                     Toast.makeText(DashBoard.this, "On duty", Toast.LENGTH_SHORT).show();
 
-                    realm = Realm.getDefaultInstance();
-                    realm.executeTransactionAsync(new Realm.Transaction() {
-                        @Override
-                        public void execute(Realm bgRealm) {
-                            AttendenceModel attendence = bgRealm.createObject(AttendenceModel.class);
-                            attendence.setOnDutyTime(newstartDate);
-                            attendence.setSartDate(startDate);
-
-
-                        }
-                    }, new Realm.Transaction.OnSuccess() {
-                        @Override
-                        public void onSuccess() {
-
-
-                        }
-                    }, new Realm.Transaction.OnError() {
-                        @Override
-                        public void onError(Throwable error) {
-                            Log.e("Feild", error.getMessage());
-
-                        }
-                    });
+//
 
                 } else {
 
@@ -290,30 +268,6 @@ public class DashBoard extends AppCompatActivity {
                     SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
                     final String offTime = sdf.format(currentTime);
 
-                    realm = Realm.getDefaultInstance();
-                    realm.executeTransactionAsync(new Realm.Transaction() {
-                        @Override
-                        public void execute(Realm bgRealm) {
-                            AttendenceModel attendence = bgRealm.createObject(AttendenceModel.class);
-                            attendence.setOffDutyTime(offTime);
-                            attendence.setSartDate(startDate);
-                            attendence.setOnDutyTime(newstartDate);
-
-                        }
-                    }, new Realm.Transaction.OnSuccess() {
-                        @Override
-                        public void onSuccess() {
-
-
-                        }
-                    }, new Realm.Transaction.OnError() {
-                        @Override
-                        public void onError(Throwable error) {
-                            Log.e("Feild", error.getMessage());
-
-                        }
-                    });
-
 
                 }
             }
@@ -361,7 +315,7 @@ public class DashBoard extends AppCompatActivity {
 
                 JSONObject jsonObject = new JSONObject();
                 try {
-                    jsonObject.put("prospect_number", "7042353004");
+                    jsonObject.put("prospect_number", "+919990925305");
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -388,9 +342,6 @@ public class DashBoard extends AppCompatActivity {
                         } else {
                             String json = response.body().string();
                             System.out.println("searchResponse " + json);
-
-
-
 
                         }
                     }

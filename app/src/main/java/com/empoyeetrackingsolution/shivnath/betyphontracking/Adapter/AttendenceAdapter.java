@@ -11,19 +11,21 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.empoyeetrackingsolution.shivnath.betyphontracking.R;
 import com.empoyeetrackingsolution.shivnath.betyphontracking.model.AttendenceModel;
+import com.empoyeetrackingsolution.shivnath.betyphontracking.model.TimelineModel;
 
-import io.realm.RealmRecyclerViewAdapter;
-import io.realm.RealmResults;
+import java.text.SimpleDateFormat;
+import java.util.List;
 
-public class AttendenceAdapter extends RealmRecyclerViewAdapter<AttendenceModel,AttendenceAdapter.MyViewHolder> {
+
+public class AttendenceAdapter extends RecyclerView.Adapter<AttendenceAdapter.MyViewHolder> {
 
     Context context;
+    private List<AttendenceModel> modelList;
 
-    public AttendenceAdapter(Context context, RealmResults<AttendenceModel> data ) {
-        super(data, true);
+    public AttendenceAdapter(Context context, List<AttendenceModel> modelList) {
         this.context = context;
+        this.modelList = modelList;
     }
-
 
     @NonNull
     @Override
@@ -37,38 +39,39 @@ public class AttendenceAdapter extends RealmRecyclerViewAdapter<AttendenceModel,
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
-        final AttendenceModel object = getData().get(position);
+        final AttendenceModel object = modelList.get(position);
 
-        holder.onTime.setText(object.getOnDutyTime());
-        holder.attenDate.setText(object.getSartDate());
-        holder.offTime.setText(object.getOffDutyTime());
+        holder.date.setText(object.getCreation_datetime());
+        holder.name.setText(object.getFull_name());
+        holder.logouttime.setText(object.getLogout_time());
+        holder.logintime.setText(object.getLogin_time());
+        holder.user.setText(object.getUser_id());
+        holder.status.setText(object.getStatus());
 
-        if (object.getOffDutyTime() == null){
 
-            holder.off.setVisibility(View.GONE);
-            holder.offTime.setVisibility(View.GONE);
-
-        }
 
 
 
     }
 
+
     @Override
-    public long getItemId(int position) {
-        return super.getItemId(position);
+    public int getItemCount() {
+        return modelList.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView onTime,offTime,attenDate,off;
+        TextView name,user,date,logintime,status,logouttime;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            onTime = itemView.findViewById(R.id.onTime);
-            offTime = itemView.findViewById(R.id.offTime);
-            attenDate = itemView.findViewById(R.id.atten_Date);
-            off = itemView.findViewById(R.id.off);
+            name = itemView.findViewById(R.id.name);
+            user = itemView.findViewById(R.id.userId);
+            date = itemView.findViewById(R.id.atten_Date);
+            logintime = itemView.findViewById(R.id.logintime);
+            logouttime = itemView.findViewById(R.id.logouttime);
+            status = itemView.findViewById(R.id.status_);
         }
     }
 }

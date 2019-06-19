@@ -19,14 +19,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="On Duty time"
+                android:text="Full Name"
                 android:id="@+id/on"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Off Duty Time"
-                android:id="@+id/off"
+                android:text="User id"
+                android:id="@+id/u"
                 android:layout_below="@id/on"/>
 
             <TextView
@@ -34,25 +34,25 @@
                 android:layout_height="wrap_content"
                 android:text="Date"
                 android:id="@+id/a_date"
-                android:layout_below="@id/off"/>
+                android:layout_below="@id/userId"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="12:0"
+                android:text="Name"
                 android:layout_marginLeft="20dp"
-                android:id="@+id/onTime"
+                android:id="@+id/name"
                 android:layout_toRightOf="@id/on"
                 />
 
             <TextView
-                android:id="@+id/offTime"
+                android:id="@+id/userId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/onTime"
-                android:layout_toRightOf="@id/off"
+                android:layout_below="@id/name"
+                android:layout_toRightOf="@id/u"
                 android:layout_marginLeft="20dp"
-                android:text="12:0" />
+                android:text="userId" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -60,7 +60,61 @@
                 android:text="date"
                 android:id="@+id/atten_Date"
                 android:layout_toRightOf="@id/on"
-                android:layout_below="@id/offTime"
+                android:layout_below="@id/u"
+                android:layout_marginLeft="20dp"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log in time"
+                android:layout_below="@id/atten_Date"
+                android:id="@+id/lt"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="date"
+                android:id="@+id/logintime"
+                android:layout_toRightOf="@id/lt"
+                android:layout_below="@id/atten_Date"
+                android:layout_marginLeft="20dp"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout time"
+                android:layout_below="@id/lt"
+                android:id="@+id/lgt"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="date"
+                android:id="@+id/logouttime"
+                android:layout_toRightOf="@id/lgt"
+                android:layout_below="@id/lt"
+                android:layout_marginLeft="20dp"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:layout_below="@id/lgt"
+                android:id="@+id/st"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="date"
+                android:id="@+id/status_"
+                android:layout_toRightOf="@id/st"
+                android:layout_below="@id/lgt"
                 android:layout_marginLeft="20dp"
 
                 />

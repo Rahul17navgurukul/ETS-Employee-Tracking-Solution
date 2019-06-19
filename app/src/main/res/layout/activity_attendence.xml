@@ -40,7 +40,8 @@
         android:layout_below="@id/attenTool"
         android:id="@+id/filetrOpt"
         android:visibility="visible"
-        android:padding="8dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
         >
 
         <RelativeLayout
@@ -57,6 +58,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/sp2"
+                android:visibility="invisible"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="50dp">
             </Spinner>
@@ -71,6 +73,7 @@
                 android:text="Apply"
                 android:background="@android:color/holo_red_light"
                 android:textColor="#fff"
+                android:padding="5dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -81,6 +84,7 @@
                 android:layout_marginTop="10dp"
                 android:background="@color/colorPrimary"
                 android:layout_below="@id/sp2"
+                android:padding="5dp"
                 android:layout_marginRight="20dp"
                 android:layout_alignParentRight="true"
                 android:textColor="#fff"/>

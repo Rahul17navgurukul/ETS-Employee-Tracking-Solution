@@ -10,6 +10,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -136,6 +137,20 @@ public class MainActivity extends AppCompatActivity {
                     try {
                         JSONObject jsonobj = new JSONObject(json);
                         String str_value = jsonobj.getString("user_id");
+                        String subRole = jsonobj.getString("role");
+
+                        if (subRole.equals("subscriber")){
+                            System.out.println("SusLogin");
+                            editor.putString("subscriber",subRole);
+                            editor.commit();
+
+                        }else {
+
+                            System.out.println("UserLogin");
+                            editor.clear();
+                            editor.remove("subscriber");
+
+                        }
 
                         System.out.println("JsonUserId >> " + str_value);
 
